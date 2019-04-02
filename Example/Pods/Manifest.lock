@@ -1,0 +1,16 @@
+PODS:
+  - HCNavigationController (0.0.1)
+
+DEPENDENCIES:
+  - HCNavigationController (from `../`)
+
+EXTERNAL SOURCES:
+  HCNavigationController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HCNavigationController: f46e6a30779b60a07e5b0c2a2af061750d0110da
+
+PODFILE CHECKSUM: e4ea27e744373357b2e7af8cfa2cb6fa9697b083
+
+COCOAPODS: 1.6.0

@@ -1,0 +1,6 @@
+module Pods_HCNavigationControllerExample {
+  umbrella header "Pods-HCNavigationControllerExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

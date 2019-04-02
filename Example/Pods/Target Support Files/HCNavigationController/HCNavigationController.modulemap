@@ -1,0 +1,6 @@
+module HCNavigationController {
+  umbrella header "HCNavigationController-umbrella.h"
+
+  export *
+  module * { export * }
+}

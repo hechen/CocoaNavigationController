@@ -1,0 +1,5 @@
+platform :osx, '10.10'
+
+target 'HCNavigationControllerExample' do
+  pod 'HCNavigationController', path: '../'
+end
