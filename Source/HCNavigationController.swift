@@ -129,18 +129,37 @@ public class HCNavigationController: NSViewController {
         return viewControllers.first!
     }
 
-    
-    /*
-     Actually, we just transition between two subviews.
+     /*
+        Actually, we just transition between two subviews.
+        Arrange from and to horizontally. Then slide the whole one from left for Push, right for Pop
+     
+                        Push
+     ◀─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+     ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐ ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
+     
+     │                   │ │                   │
+     
+     │                   │ │                   │
+     
+     │       From        │ │        To         │
+     
+     │                   │ │                   │
+     
+     │                   │ │                   │
+     
+     └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘ └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘
+     ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ▶
+                        Pop
      */
-    private func transition(from fromViewController: NSViewController, to toViewController: NSViewController, animated: Bool, operation: NavigationOperation = .Push) {
+    private func transition(from fromViewController: NSViewController,
+                            to toViewController: NSViewController,
+                            animated: Bool, operation: NavigationOperation = .Push) {
         
         toViewController.view.autoresizingMask = self.view.autoresizingMask
         
         var fromViewControllerToFrame = self.view.bounds
         var toViewControllerFromFrame = self.view.bounds
 
-        
         if !animated {
             fromViewController.view.removeFromSuperview()
             toViewController.view.frame = self.view.bounds

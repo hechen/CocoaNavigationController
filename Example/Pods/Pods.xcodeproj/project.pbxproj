@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		16CC8B17F2D2A01594A728C10ABE5135 /* Pods-HCNavigationControllerExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3652511B3D6C15B163EAF789298012 /* Pods-HCNavigationControllerExample-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3D528FB061EF957785028ABFEB6EB2CA /* NSViewController+HCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E24A5C0EAAD486EA51D66688EAE7C /* NSViewController+HCNavigationController.swift */; };
-		9225CFD2B633717B1335B87A03436A94 /* HCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E796A9FA990577B7A1A7B415E97C52 /* HCNavigationController.swift */; };
-		9D362E4BA42026A065D8F493060612DD /* HCNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75867C949394AC048B33DE6527E5D4F9 /* HCNavigationController-dummy.m */; };
-		A41CD588C06821A6F93150FBE2A9813E /* NSView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38199D6B1135216BB9EACE8651E86C2E /* NSView+Screenshot.swift */; };
-		B9DC6CCBEE129B97EDD59E3D10E16896 /* HCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887D50C01B7245B8928F5F1C82289801 /* HCNavigationBar.swift */; };
+		3D528FB061EF957785028ABFEB6EB2CA /* NSViewController+HCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81BF4837082558918F80AAD911B6311 /* NSViewController+HCNavigationController.swift */; };
+		9225CFD2B633717B1335B87A03436A94 /* HCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4430A38EF7094D2F0D463AC70ECBD442 /* HCNavigationController.swift */; };
+		9D362E4BA42026A065D8F493060612DD /* HCNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F541C2829CA3A94D78A359891E7DF73F /* HCNavigationController-dummy.m */; };
+		A41CD588C06821A6F93150FBE2A9813E /* NSView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D8CE0C1C030CB75AAA15638B0ECE1A /* NSView+Screenshot.swift */; };
+		B9DC6CCBEE129B97EDD59E3D10E16896 /* HCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE980EC230603A82676579CB4571859 /* HCNavigationBar.swift */; };
 		D34655BA14ACBE8927F7E9A2CE7270BC /* Pods-HCNavigationControllerExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADAC1BD18AB9CF28658CD55CEE999F8 /* Pods-HCNavigationControllerExample-dummy.m */; };
-		E223B55D32D1157B392BEE4E9231DFB1 /* HCNavigationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1B2746524A31A0C9C6BAF6847A678C5 /* HCNavigationController-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E223B55D32D1157B392BEE4E9231DFB1 /* HCNavigationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E40B6EE446931F728B4B9140685C8A5 /* HCNavigationController-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,26 +28,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02B3EB4575A147EB27D7D8FD648A3290 /* HCNavigationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HCNavigationController.modulemap; sourceTree = "<group>"; };
 		0A3652511B3D6C15B163EAF789298012 /* Pods-HCNavigationControllerExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HCNavigationControllerExample-umbrella.h"; sourceTree = "<group>"; };
-		2AFCB0066EA88A350257A9C6C4EB33C9 /* HCNavigationController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HCNavigationController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1DE980EC230603A82676579CB4571859 /* HCNavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HCNavigationBar.swift; path = Source/HCNavigationBar.swift; sourceTree = "<group>"; };
+		27D8CE0C1C030CB75AAA15638B0ECE1A /* NSView+Screenshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Screenshot.swift"; sourceTree = "<group>"; };
+		368648F43D345D0DF099725EBE1C23D0 /* HCNavigationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCNavigationController.xcconfig; sourceTree = "<group>"; };
 		3690CFB55E9EE424BFF1E1C341EBE931 /* Pods-HCNavigationControllerExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HCNavigationControllerExample.modulemap"; sourceTree = "<group>"; };
-		38199D6B1135216BB9EACE8651E86C2E /* NSView+Screenshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Screenshot.swift"; sourceTree = "<group>"; };
-		40AF3C3F9E332A14A32BC8E0FF404C8F /* HCNavigationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCNavigationController-prefix.pch"; sourceTree = "<group>"; };
+		4430A38EF7094D2F0D463AC70ECBD442 /* HCNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HCNavigationController.swift; path = Source/HCNavigationController.swift; sourceTree = "<group>"; };
+		4A1209E765D4E399B42A6DB6F3EC3809 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		68CC0902D5466D3216017105D535B7A6 /* libPods-HCNavigationControllerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HCNavigationControllerExample.a"; path = "libPods-HCNavigationControllerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ADAC1BD18AB9CF28658CD55CEE999F8 /* Pods-HCNavigationControllerExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HCNavigationControllerExample-dummy.m"; sourceTree = "<group>"; };
 		6B3813A1C4DAA2F93BAF2356F319ED1F /* Pods-HCNavigationControllerExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HCNavigationControllerExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		75867C949394AC048B33DE6527E5D4F9 /* HCNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCNavigationController-dummy.m"; sourceTree = "<group>"; };
-		81E796A9FA990577B7A1A7B415E97C52 /* HCNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HCNavigationController.swift; path = Source/HCNavigationController.swift; sourceTree = "<group>"; };
-		887D50C01B7245B8928F5F1C82289801 /* HCNavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HCNavigationBar.swift; path = Source/HCNavigationBar.swift; sourceTree = "<group>"; };
+		8BA77D895907E9DBF595A7FF3E60D364 /* HCNavigationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCNavigationController-prefix.pch"; sourceTree = "<group>"; };
+		8E40B6EE446931F728B4B9140685C8A5 /* HCNavigationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCNavigationController-umbrella.h"; sourceTree = "<group>"; };
+		925BBF12A4DA757A15DD7E91C278F46A /* HCNavigationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HCNavigationController.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5CB08DA725B1EC1702606F831CE9390 /* Pods-HCNavigationControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HCNavigationControllerExample.release.xcconfig"; sourceTree = "<group>"; };
 		AF1A3403DF25A9001325CE9E9A73F398 /* libHCNavigationController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHCNavigationController.a; path = libHCNavigationController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B57E24A5C0EAAD486EA51D66688EAE7C /* NSViewController+HCNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSViewController+HCNavigationController.swift"; sourceTree = "<group>"; };
+		B29D40857A53B1C4E29D95C51271CD8E /* HCNavigationController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HCNavigationController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D81BF4837082558918F80AAD911B6311 /* NSViewController+HCNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSViewController+HCNavigationController.swift"; sourceTree = "<group>"; };
 		DB1D5B45B1A07BEE44E4F6999BB71F90 /* Pods-HCNavigationControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HCNavigationControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
-		E1B2746524A31A0C9C6BAF6847A678C5 /* HCNavigationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCNavigationController-umbrella.h"; sourceTree = "<group>"; };
 		F1899D6463780B0F9CEC67072E7580EC /* Pods-HCNavigationControllerExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HCNavigationControllerExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F46473F4118BA64C54ABAC4EEFFBC326 /* HCNavigationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCNavigationController.xcconfig; sourceTree = "<group>"; };
+		F541C2829CA3A94D78A359891E7DF73F /* HCNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCNavigationController-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,46 +69,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0462832672F499E5293969D5B554E41B /* Support Files */ = {
+		12D782D798678C771ADE46917E430A74 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				02B3EB4575A147EB27D7D8FD648A3290 /* HCNavigationController.modulemap */,
-				F46473F4118BA64C54ABAC4EEFFBC326 /* HCNavigationController.xcconfig */,
-				75867C949394AC048B33DE6527E5D4F9 /* HCNavigationController-dummy.m */,
-				40AF3C3F9E332A14A32BC8E0FF404C8F /* HCNavigationController-prefix.pch */,
-				E1B2746524A31A0C9C6BAF6847A678C5 /* HCNavigationController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HCNavigationController";
-			sourceTree = "<group>";
-		};
-		34B2934D848B7FAB6D5913803615F004 /* HCNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				887D50C01B7245B8928F5F1C82289801 /* HCNavigationBar.swift */,
-				81E796A9FA990577B7A1A7B415E97C52 /* HCNavigationController.swift */,
-				46A1A889D21B50DEA2F54A2DD1DA55DC /* Extension */,
-				A7B3AE560771DF1BABA6A9C2113084C9 /* Pod */,
-				0462832672F499E5293969D5B554E41B /* Support Files */,
-			);
-			name = HCNavigationController;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		46A1A889D21B50DEA2F54A2DD1DA55DC /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				38199D6B1135216BB9EACE8651E86C2E /* NSView+Screenshot.swift */,
-				B57E24A5C0EAAD486EA51D66688EAE7C /* NSViewController+HCNavigationController.swift */,
+				27D8CE0C1C030CB75AAA15638B0ECE1A /* NSView+Screenshot.swift */,
+				D81BF4837082558918F80AAD911B6311 /* NSViewController+HCNavigationController.swift */,
 			);
 			name = Extension;
 			path = Source/Extension;
 			sourceTree = "<group>";
 		};
+		4A48782FD26F10036C3D5EB0E252BB3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				925BBF12A4DA757A15DD7E91C278F46A /* HCNavigationController.modulemap */,
+				368648F43D345D0DF099725EBE1C23D0 /* HCNavigationController.xcconfig */,
+				F541C2829CA3A94D78A359891E7DF73F /* HCNavigationController-dummy.m */,
+				8BA77D895907E9DBF595A7FF3E60D364 /* HCNavigationController-prefix.pch */,
+				8E40B6EE446931F728B4B9140685C8A5 /* HCNavigationController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HCNavigationController";
+			sourceTree = "<group>";
+		};
+		7534BA5993F5CA1FB67AF84381351FC8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B29D40857A53B1C4E29D95C51271CD8E /* HCNavigationController.podspec */,
+				4A1209E765D4E399B42A6DB6F3EC3809 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		7EEDC53479FF5D4DE0ADD37128FA3943 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				34B2934D848B7FAB6D5913803615F004 /* HCNavigationController */,
+				B58370008D2054FEC507E32885ECDAD5 /* HCNavigationController */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -121,12 +118,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A7B3AE560771DF1BABA6A9C2113084C9 /* Pod */ = {
+		B58370008D2054FEC507E32885ECDAD5 /* HCNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				2AFCB0066EA88A350257A9C6C4EB33C9 /* HCNavigationController.podspec */,
+				1DE980EC230603A82676579CB4571859 /* HCNavigationBar.swift */,
+				4430A38EF7094D2F0D463AC70ECBD442 /* HCNavigationController.swift */,
+				12D782D798678C771ADE46917E430A74 /* Extension */,
+				7534BA5993F5CA1FB67AF84381351FC8 /* Pod */,
+				4A48782FD26F10036C3D5EB0E252BB3A /* Support Files */,
 			);
-			name = Pod;
+			name = HCNavigationController;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -489,7 +491,7 @@
 		};
 		CAA402546F2EDF322060B11DBF6BA1DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F46473F4118BA64C54ABAC4EEFFBC326 /* HCNavigationController.xcconfig */;
+			baseConfigurationReference = 368648F43D345D0DF099725EBE1C23D0 /* HCNavigationController.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -516,7 +518,7 @@
 		};
 		F627F97CAF98247922E9CFDF5479029C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F46473F4118BA64C54ABAC4EEFFBC326 /* HCNavigationController.xcconfig */;
+			baseConfigurationReference = 368648F43D345D0DF099725EBE1C23D0 /* HCNavigationController.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
