@@ -1,10 +1,12 @@
 # HCNavigationController
-UINavigationController alike, brought into Cocoa.
 
+UINavigationController alike, macOS
+
+
+![Demo](.assets/demo.gif)
 
 
 ### How to use
-
 
 ``` Swift
     let navigationController = HCNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
@@ -17,7 +19,6 @@ UINavigationController alike, brought into Cocoa.
     navigationController.pushViewController(vc, animated: true)
 
     // Pop
-    let vc = TestViewController(nibName: "TestViewController", bundle: nil)
     navigationController?.popViewController(vc, animated: true)
 ```
 

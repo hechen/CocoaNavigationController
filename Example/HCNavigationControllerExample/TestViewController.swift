@@ -26,17 +26,17 @@ class TestViewController: NSViewController {
         
         view.backgroundColor = [NSColor.red, NSColor.blue, .green, .gray, .yellow].randomElement()
 
-        navigationBar = NavigationBar.createFromNib()
-        if navigationBar != nil {
-            navigationBar!.frame = NSRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44)
-            view.addSubview(navigationBar!)
-        }
-        
-        navigationBar?.backButton.target = self
-        navigationBar?.backButton.action = #selector(backButtonAction(_:))
-        navigationBar?.backgroundColor = .white
-        navigationBar?.title = date
-        navigationBar?.backButton.imagePosition = .imageLeft
+//        navigationBar = NavigationBar.createFromNib()
+//        if navigationBar != nil {
+//            navigationBar!.frame = NSRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44)
+//            view.addSubview(navigationBar!)
+//        }
+//        
+//        navigationBar?.backButton.target = self
+//        navigationBar?.backButton.action = #selector(backButtonAction(_:))
+//        navigationBar?.backgroundColor = .white
+//        navigationBar?.title = date
+//        navigationBar?.backButton.imagePosition = .imageLeft
     }
 }
 
