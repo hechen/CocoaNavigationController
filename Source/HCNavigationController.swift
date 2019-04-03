@@ -10,44 +10,41 @@
 import Cocoa
 
 public protocol HCNavigationControllerDelegate : NSObjectProtocol {
-    
-}
-
-
-public enum NavigationOperation {
-    case Push
-    case Pop
+    // Called when the navigation controller shows a new top view controller via a push, pop or setting of the view controller stack.
+    func navigationController(_ navigationController: HCNavigationController, willShow viewController: NSViewController, animated: Bool)
+    func navigationController(_ navigationController: HCNavigationController, didShow viewController: NSViewController, animated: Bool)
 }
 
 /*
  HCNavigationController is a UINavigationController alike component brought to Cocoa
+ 
+ It manages a stack of cocoa view controllers and a navigation bar.
+ It performs horizontal view transitions for pushed and popped views while keeping the navigation bar in sync.
  */
+extension HCNavigationController {
+    public enum Operation : Int {
+        case none
+        case push
+        case pop
+    }
+}
+
 public class HCNavigationController: NSViewController {
+    
+    weak open var delegate: HCNavigationControllerDelegate?
+
     // Convenience method pushes the root view controller without animation.
-    // you must specify frame, since there may no window to attach.
-    public init(withFrame frame: CGRect, rootViewController: NSViewController?) {
-        super.init(nibName: nil, bundle: nil)
-        setup(with: frame, rootViewController: rootViewController)
-    }
-    
-    public override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup(with: .zero, rootViewController: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setup(with: .zero, rootViewController: nil)
-    }
-    
-    private func setup(with frame: CGRect, rootViewController: NSViewController?) {
-        self.view = NSView(frame: frame)
+    // You must specify frame, since there may no window to attach.
+    public convenience init(frame frameRect: CGRect, rootViewController: NSViewController?) {
+        self.init(nibName: nil, bundle: nil)
+        
+        self.view = NSView(frame: frameRect)
         self.view.autoresizingMask = [.minXMargin, .minYMargin, .width, .maxXMargin, .maxYMargin, .height]
         
         var viewController: NSViewController
         if rootViewController == nil {
             viewController = NSViewController()
-            viewController.view = NSView(frame: frame)
+            viewController.view = NSView(frame: frameRect)
         } else {
             viewController = rootViewController!
         }
@@ -62,6 +59,8 @@ public class HCNavigationController: NSViewController {
     // Uses a horizontal slide transition. Has no effect if the view controller is already in the stack.
     open func pushViewController(_ viewController: NSViewController, animated: Bool) {
         
+        viewController.navigationController = self
+        
         let topViewController = self.topViewController
         
         viewControllers.append(viewController)
@@ -70,6 +69,7 @@ public class HCNavigationController: NSViewController {
     }
     
     // Returns the popped controller.
+    @discardableResult
     open func popViewController(animated: Bool) -> NSViewController? {
         // rootViewController is not allowed to pop
         if viewControllers.count == 1 {
@@ -80,12 +80,13 @@ public class HCNavigationController: NSViewController {
         let poppedViewController = self.topViewController
         viewControllers = viewControllers.dropLast()
         
-        transition(from: poppedViewController, to: self.topViewController, animated: animated, operation: .Pop)
+        transition(from: poppedViewController, to: self.topViewController, animated: animated, operation: .pop)
         
         return poppedViewController
     }
     
     // Pops view controllers until the one specified is on top. Returns the popped controllers.
+    @discardableResult
     open func popToViewController(_ viewController: NSViewController, animated: Bool) -> [NSViewController]? {
         // last one.
         if viewController == topViewController {
@@ -153,7 +154,7 @@ public class HCNavigationController: NSViewController {
      */
     private func transition(from fromViewController: NSViewController,
                             to toViewController: NSViewController,
-                            animated: Bool, operation: NavigationOperation = .Push) {
+                            animated: Bool, operation: Operation = .push) {
         
         toViewController.view.autoresizingMask = self.view.autoresizingMask
         
@@ -169,15 +170,17 @@ public class HCNavigationController: NSViewController {
         
         // animate frame change
         switch operation {
-        case .Push:
+        case .push:
             // toViewController from right to left.
             fromViewControllerToFrame.origin.x = -self.view.frame.size.width
             toViewControllerFromFrame.origin.x = self.view.frame.size.width
             
-        case .Pop:
+        case .pop:
             /// Pop fromViewController, offset width to the right.
             fromViewControllerToFrame.origin.x = self.view.frame.size.width
             toViewControllerFromFrame.origin.x = -self.view.frame.size.width
+            
+        case .none: break
         }
         
         
@@ -196,9 +199,15 @@ public class HCNavigationController: NSViewController {
         NSAnimationContext.current.completionHandler = {
             toViewController.view.frame = self.view.frame
             fromControllerSnapshot.removeFromSuperview()
+            
             self.view.replaceSubview(toControllerSnapshot, with: toViewController.view)
+            
+            self.delegate?.navigationController(self, didShow: toViewController, animated: animated)
+            
             toViewController.view.frame = self.view.bounds
         }
+        
+        delegate?.navigationController(self, willShow: toViewController, animated: animated)
      
         // Animation Group
         NSAnimationContext.beginGrouping()

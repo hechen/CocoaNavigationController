@@ -14,6 +14,8 @@
 		74BBF6862253323400E21EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BBF6842253323400E21EA8 /* Main.storyboard */; };
 		74BBF69F225364B000E21EA8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBF69D225364B000E21EA8 /* TestViewController.swift */; };
 		74BBF6A0225364B000E21EA8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BBF69E225364B000E21EA8 /* TestViewController.xib */; };
+		74C0C8A62254A8760033D301 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C0C8A52254A8760033D301 /* NavigationBar.swift */; };
+		74C0C8A82254AB950033D301 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C0C8A72254AB950033D301 /* NavigationBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		74BBF6882253323400E21EA8 /* HCNavigationControllerExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HCNavigationControllerExample.entitlements; sourceTree = "<group>"; };
 		74BBF69D225364B000E21EA8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		74BBF69E225364B000E21EA8 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		74C0C8A52254A8760033D301 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		74C0C8A72254AB950033D301 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		A1D62D7DBB696F769EF721E9 /* Pods-HCNavigationControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCNavigationControllerExample.debug.xcconfig"; path = "Target Support Files/Pods-HCNavigationControllerExample/Pods-HCNavigationControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,8 @@
 				74BBF6882253323400E21EA8 /* HCNavigationControllerExample.entitlements */,
 				74BBF69D225364B000E21EA8 /* TestViewController.swift */,
 				74BBF69E225364B000E21EA8 /* TestViewController.xib */,
+				74C0C8A52254A8760033D301 /* NavigationBar.swift */,
+				74C0C8A72254AB950033D301 /* NavigationBar.xib */,
 			);
 			path = HCNavigationControllerExample;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 				74BBF6832253323400E21EA8 /* Assets.xcassets in Resources */,
 				74BBF6A0225364B000E21EA8 /* TestViewController.xib in Resources */,
 				74BBF6862253323400E21EA8 /* Main.storyboard in Resources */,
+				74C0C8A82254AB950033D301 /* NavigationBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +200,7 @@
 				74BBF6812253323400E21EA8 /* ViewController.swift in Sources */,
 				74BBF69F225364B000E21EA8 /* TestViewController.swift in Sources */,
 				74BBF67F2253323400E21EA8 /* AppDelegate.swift in Sources */,
+				74C0C8A62254A8760033D301 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

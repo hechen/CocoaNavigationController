@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51F7C1A0F6B9AD19C43AE3B0F616F10F"
+               BlueprintIdentifier = "E0E0F58A2FE6ECC92D820DD0B127E1E3"
                BuildableName = "libHCNavigationController.a"
                BlueprintName = "HCNavigationController"
                ReferencedContainer = "container:Pods.xcodeproj">

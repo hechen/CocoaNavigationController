@@ -12,8 +12,6 @@ import HCNavigationController
 class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
 
     override var representedObject: Any? {
@@ -23,20 +21,16 @@ class ViewController: NSViewController {
     }
 
     @IBAction func showNavigationController(_ sender: Any) {
-        
-//        let window = NSApp.keyWindow
-        
         // Do any additional setup after loading the view.
-
-        let navigationController = HCNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
-        let window = NSWindow(contentViewController: self.navigationController!)
-        window.makeKeyAndOrderFront(nil)
-        
-        
+        let windowFrame = NSApp.keyWindow!.frame
+        let navigationController = HCNavigationController(frame: windowFrame, rootViewController: nil)
+        navigationController.delegate = self
         
         self.navigationController = navigationController
+        
+        let window = NSWindow(contentViewController: self.navigationController!)
+        window.makeKeyAndOrderFront(nil)
     }
-    
     
     @IBAction func Push(_ sender: Any) {
         let vc = TestViewController(nibName: "TestViewController", bundle: nil)
@@ -48,3 +42,12 @@ class ViewController: NSViewController {
     }
 }
 
+extension ViewController: HCNavigationControllerDelegate {
+    func navigationController(_ navigationController: HCNavigationController, willShow viewController: NSViewController, animated: Bool) {
+        print("\(viewController) will show in \(navigationController)")
+    }
+    
+    func navigationController(_ navigationController: HCNavigationController, didShow viewController: NSViewController, animated: Bool) {
+        print("\(viewController) did show in \(navigationController)")
+    }
+}
