@@ -28,10 +28,13 @@ class ViewController: NSViewController {
         
         // Do any additional setup after loading the view.
 
-        self.navigationController = HCNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
-        
+        let navigationController = HCNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
         let window = NSWindow(contentViewController: self.navigationController!)
         window.makeKeyAndOrderFront(nil)
+        
+        
+        
+        self.navigationController = navigationController
     }
     
     

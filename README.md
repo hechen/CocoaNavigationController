@@ -3,6 +3,25 @@ UINavigationController alike, brought into Cocoa.
 
 
 
+### How to use
+
+
+``` Swift
+    let navigationController = HCNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
+    let window = NSWindow(contentViewController: self.navigationController!)
+    window.makeKeyAndOrderFront(nil)
+
+
+    // Push
+    let vc = TestViewController(nibName: "TestViewController", bundle: nil)
+    navigationController.pushViewController(vc, animated: true)
+
+    // Pop
+    let vc = TestViewController(nibName: "TestViewController", bundle: nil)
+    navigationController?.popViewController(vc, animated: true)
+```
+
+
 
 ### Under the hood
 
