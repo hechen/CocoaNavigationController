@@ -26,9 +26,12 @@ UINavigationController alike, macOS
 
 ### Under the hood
 
-    Actually, we just transition between two subviews.
+Actually, we just transition between two subview, contained by root view.
 
-    Arrange from and to horizontally. Then slide the whole one from left for Push, right for Pop
+Arrange the two subview horizontally. Then slide the whole one from right to left for push, pop with opposite direction.
+
+
+``` Swift
 
                         Push
      ◀─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
@@ -47,8 +50,10 @@ UINavigationController alike, macOS
      └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘ └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘
      ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ▶
                         Pop
+                        
+```
 
-For transition fluently, we snapshot from view and to view to placeholder, which hide all the remove/add actions.
+For transition fluently, we snapshot from-view and to-view as placeholders, which hide all the remove/add actions.
 
 And, like `drawViewHierarchyInRect:afterScreenUpdates` in iOS, NSView support similar method like below:
 
