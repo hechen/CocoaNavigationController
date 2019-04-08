@@ -78,7 +78,7 @@ public class HCNavigationController: NSViewController {
         
         // last view controller
         let poppedViewController = self.topViewController
-        viewControllers = viewControllers.dropLast()
+        viewControllers = Array(viewControllers.dropLast())
         
         transition(from: poppedViewController, to: self.topViewController, animated: animated, operation: .pop)
         
@@ -103,7 +103,7 @@ public class HCNavigationController: NSViewController {
         for i in index+1..<viewControllers.count {
             poppedViewControllers.append(viewControllers[i])
         }
-        viewControllers = viewControllers.dropLast(viewControllers.count - index - 1)
+        viewControllers = Array(viewControllers.dropLast(viewControllers.count - index - 1))
 
         transition(from: topViewController, to: viewController, animated: animated)
         

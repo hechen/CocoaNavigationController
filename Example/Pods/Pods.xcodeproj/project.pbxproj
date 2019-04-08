@@ -313,6 +313,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		403F030FBBD79D0C7FA6A6B7745C606F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9767EC24D4CFDC9D1F19D76BADEBA93C /* HCNavigationController.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/HCNavigationController/HCNavigationController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = Headers/Public/HCNavigationController/HCNavigationController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HCNavigationController;
+				PRODUCT_NAME = HCNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
 		581C28FCAB08691CD21D02A1E022545B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5CB08DA725B1EC1702606F831CE9390 /* Pods-HCNavigationControllerExample.release.xcconfig */;
@@ -401,6 +428,33 @@
 			};
 			name = Debug;
 		};
+		959DDA587E8F1842CE9004CF063A76BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9767EC24D4CFDC9D1F19D76BADEBA93C /* HCNavigationController.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/HCNavigationController/HCNavigationController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = Headers/Public/HCNavigationController/HCNavigationController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HCNavigationController;
+				PRODUCT_NAME = HCNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		AB39E9DAA3FB7A60D3F76D07BB1684A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,60 +539,6 @@
 			};
 			name = Debug;
 		};
-		CB67A870BE6BE978FF2F07031D614596 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9767EC24D4CFDC9D1F19D76BADEBA93C /* HCNavigationController.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/HCNavigationController/HCNavigationController-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = Headers/Public/HCNavigationController/HCNavigationController.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = HCNavigationController;
-				PRODUCT_NAME = HCNavigationController;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		D677052B31DA94EF847D23473DA6B598 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9767EC24D4CFDC9D1F19D76BADEBA93C /* HCNavigationController.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/HCNavigationController/HCNavigationController-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = Headers/Public/HCNavigationController/HCNavigationController.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = HCNavigationController;
-				PRODUCT_NAME = HCNavigationController;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -563,8 +563,8 @@
 		53D33D0422D97210A9C867097F41B26B /* Build configuration list for PBXNativeTarget "HCNavigationController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D677052B31DA94EF847D23473DA6B598 /* Debug */,
-				CB67A870BE6BE978FF2F07031D614596 /* Release */,
+				403F030FBBD79D0C7FA6A6B7745C606F /* Debug */,
+				959DDA587E8F1842CE9004CF063A76BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

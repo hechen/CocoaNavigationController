@@ -8,5 +8,6 @@ Pod::Spec.new do |s|
 	s.source   = { :git => 'https://github.com/hechen/HCNavigationController.git', :tag => '0.0.1' }
 	s.source_files = 'Source/**/**/*'
 	s.requires_arc = true
+  s.swift_version = '4.2'
 	s.osx.deployment_target = '10.10'
 end
