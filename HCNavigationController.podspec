@@ -7,7 +7,12 @@ Pod::Spec.new do |s|
 	s.authors  = { 'Chen' => 'hechen.dream@gmail.com'}
 	s.source   = { :git => 'https://github.com/hechen/HCNavigationController.git', :tag => '0.0.1' }
 	s.source_files = 'Source/**/**/*'
+	s.platform     = :osx, '10.10'
 	s.requires_arc = true
   s.swift_version = '4.2'
-	s.osx.deployment_target = '10.10'
+	s.license      = {
+    :type => 'MIT',
+    :file => 'LICENSE',
+    :text => 'Permission is hereby granted ...'
+  }
 end
