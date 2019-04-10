@@ -1,6 +1,6 @@
 # HCNavigationController
 
-![Cocoapods](https://img.shields.io/cocoapods/v/HCNavigationController.svg)   ![Cocoapods platforms](https://img.shields.io/cocoapods/p/HCNavigationController.svg)   ![Swift Version](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat)
+![Build Status](https://travis-ci.com/hechen/HCNavigationController.svg?branch=master)   ![Cocoapods](https://img.shields.io/cocoapods/v/HCNavigationController.svg)   ![Cocoapods platforms](https://img.shields.io/cocoapods/p/HCNavigationController.svg)   ![Swift Version](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat)
 
 UINavigationController alike, macOS
 
