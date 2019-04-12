@@ -1,6 +1,6 @@
-# HCNavigationController
+# CocoaNavigationController
 
-![Build Status](https://travis-ci.com/hechen/HCNavigationController.svg?branch=master)   ![Cocoapods](https://img.shields.io/cocoapods/v/HCNavigationController.svg)   ![Cocoapods platforms](https://img.shields.io/cocoapods/p/HCNavigationController.svg)   ![Swift Version](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat)
+![Build Status](https://travis-ci.com/hechen/CocoaNavigationController.svg?branch=master)   ![Cocoapods](https://img.shields.io/cocoapods/v/CocoaNavigationController.svg)   ![Cocoapods platforms](https://img.shields.io/cocoapods/p/CocoaNavigationController.svg)   ![Swift Version](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat)
 
 UINavigationController alike, macOS
 
@@ -11,7 +11,7 @@ UINavigationController alike, macOS
 ### How to use
 
 ``` Swift
-    let navigationController = HCNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
+    let navigationController = CocoaNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
     let window = NSWindow(contentViewController: self.navigationController!)
     window.makeKeyAndOrderFront(nil)
 

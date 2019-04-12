@@ -1,0 +1,6 @@
+module Pods_CocoaNavigationControllerExample {
+  umbrella header "Pods-CocoaNavigationControllerExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

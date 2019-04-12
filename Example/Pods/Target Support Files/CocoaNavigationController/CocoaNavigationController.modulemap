@@ -1,0 +1,6 @@
+module CocoaNavigationController {
+  umbrella header "CocoaNavigationController-umbrella.h"
+
+  export *
+  module * { export * }
+}

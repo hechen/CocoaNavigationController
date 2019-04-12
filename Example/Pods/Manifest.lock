@@ -1,16 +1,16 @@
 PODS:
-  - HCNavigationController (0.0.1)
+  - CocoaNavigationController (0.0.4)
 
 DEPENDENCIES:
-  - HCNavigationController (from `../`)
+  - CocoaNavigationController (from `../`)
 
 EXTERNAL SOURCES:
-  HCNavigationController:
+  CocoaNavigationController:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HCNavigationController: ea3a87a58b4f8907ba9bf8f334b9893ed031e9a4
+  CocoaNavigationController: 79caaad03191b0ad426858837483135f920a9282
 
-PODFILE CHECKSUM: e4ea27e744373357b2e7af8cfa2cb6fa9697b083
+PODFILE CHECKSUM: 95ce4b80834fd0fc2175cffb0a645a834b1225db
 
 COCOAPODS: 1.6.0

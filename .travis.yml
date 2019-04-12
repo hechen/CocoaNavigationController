@@ -12,9 +12,9 @@ env:
   global:
   - LANG=en_US.UTF-8
   - LC_ALL=en_US.UTF-8
-  - XCODE_WORKSPACE=Example/HCNavigationControllerExample.xcworkspace
+  - XCODE_WORKSPACE=Example/CocoaNavigationControllerExample.xcworkspace
   matrix:
-  - SCHEME="HCNavigationControllerExample"
+  - SCHEME="CocoaNavigationControllerExample"
 
 
 before_install:
