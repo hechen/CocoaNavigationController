@@ -7,14 +7,14 @@
 
 import Cocoa
 
-private var HCNAVIGATIONCONTROLLER_PROPERTY = 0
+private var COCOANAVIGATIONCONTROLLER_PROPERTY = 0
 public extension NSViewController {
-    var navigationController: HCNavigationController? {
+    var navigationController: CocoaNavigationController? {
         get {
-            return objc_getAssociatedObject(self, &HCNAVIGATIONCONTROLLER_PROPERTY) as? HCNavigationController
+            return objc_getAssociatedObject(self, &COCOANAVIGATIONCONTROLLER_PROPERTY) as? CocoaNavigationController
         }
         set {
-            objc_setAssociatedObject(self, &HCNAVIGATIONCONTROLLER_PROPERTY, newValue, .OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &COCOANAVIGATIONCONTROLLER_PROPERTY, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
 }
