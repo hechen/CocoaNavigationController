@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name     = 'CocoaNavigationController'
-	s.version  = '0.1'
+	s.version  = '0.1.1'
 	s.license  = 'MIT'
 	s.summary  = 'UINavigationController Alike On macOS'
 	s.homepage = 'https://github.com/hechen/CocoaNavigationController'
