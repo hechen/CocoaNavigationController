@@ -9,7 +9,7 @@
 import Cocoa
 
 class TestViewController: NSViewController {
-
+    
     @IBOutlet weak var randomLabel: NSTextField!
     
     var navigationBar: NavigationBar?
@@ -24,7 +24,7 @@ class TestViewController: NSViewController {
         let date = formatter.string(from: Date())
         randomLabel.stringValue = date
         
-        view.backgroundColor = [NSColor.red, NSColor.blue, .green, .gray, .yellow].randomElement()
+        view.backgroundColor = [NSColor.red, .blue, .green, .gray, .yellow, .orange, .purple].randomElement()
 
 //        navigationBar = NavigationBar.createFromNib()
 //        if navigationBar != nil {

@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/hechen/CocoaNavigationController.git",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "source_files": "Source/**/**/*",
   "platforms": {
-    "osx": "10.10"
+    "osx": "10.13"
   },
   "requires_arc": true,
-  "swift_version": "4.2"
+  "swift_version": "5.0"
 }

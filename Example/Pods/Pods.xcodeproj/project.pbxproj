@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		33DFA90D0733D2DBED83DF2A5383F1B9 /* CocoaNavigationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C810401DD069F09C2D9169FDDF44C16E /* CocoaNavigationController-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		39CD1EA0D28451FC41626B40F605AF8F /* Pods-CocoaNavigationControllerExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B0DF114BC68B5EB12B375CEEFF9BBFA /* Pods-CocoaNavigationControllerExample-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		855E9A7C5F0495BCDC91C1628B32D841 /* CocoaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B324F9B5E5D8AE81E5F1C78793E8E8A /* CocoaNavigationController.swift */; };
-		AD4ADC8F9D158981CBC6728638678F3D /* NSViewController+HCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E0593DBEB51250F6B4E563AC9C5C1 /* NSViewController+HCNavigationController.swift */; };
-		AEE53CB5731558AFB8FCFE6C2ED94326 /* CocoaNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB41EB519820D38CEBCC7D3D6734E78 /* CocoaNavigationController-dummy.m */; };
-		C9AED723D43879FD7AA79A703C6D369C /* NSView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA652A4C78AF5C5057104421C8B8D83 /* NSView+Screenshot.swift */; };
+		902B86A31A9F51258811E069CACCBBBD /* NSView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC1387CFB57E06AF040DD67F297C45 /* NSView+Screenshot.swift */; };
+		A4A2147FABAA8E89013CD22A940FC76C /* NSViewController+CocoaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4A1777A722410015F5BA9500C7E96B /* NSViewController+CocoaNavigationController.swift */; };
+		CDC93D5A713EC8FEB2FA4ABDD98EE5FC /* CocoaNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB41EB519820D38CEBCC7D3D6734E78 /* CocoaNavigationController-dummy.m */; };
+		CF8DA7F82675CFC740E4013E9F4CF054 /* CocoaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B324F9B5E5D8AE81E5F1C78793E8E8A /* CocoaNavigationController.swift */; };
 		EE487D157E6F68CCABE408516E953FEC /* Pods-CocoaNavigationControllerExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2D41A69D32E3F9E30F4281885E2E86 /* Pods-CocoaNavigationControllerExample-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -27,23 +27,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044C5D1F40179C5D267F88ADC333B40F /* CocoaNavigationController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CocoaNavigationController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		0EA6C8F73D63DB07D7406D5578D2954D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		044C5D1F40179C5D267F88ADC333B40F /* CocoaNavigationController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CocoaNavigationController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0EA6C8F73D63DB07D7406D5578D2954D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		1B0DF114BC68B5EB12B375CEEFF9BBFA /* Pods-CocoaNavigationControllerExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CocoaNavigationControllerExample-umbrella.h"; sourceTree = "<group>"; };
 		1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaNavigationController.xcconfig; sourceTree = "<group>"; };
 		2E61B103FEE6D1A4B3BF5CAB59FF2F9B /* Pods-CocoaNavigationControllerExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CocoaNavigationControllerExample.modulemap"; sourceTree = "<group>"; };
-		36830B6956B5E60A42DB47C901096D70 /* libCocoaNavigationController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaNavigationController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36830B6956B5E60A42DB47C901096D70 /* libCocoaNavigationController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCocoaNavigationController.a; path = libCocoaNavigationController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA937D7389927DAF916F2A13D71C09C /* Pods-CocoaNavigationControllerExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CocoaNavigationControllerExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4B324F9B5E5D8AE81E5F1C78793E8E8A /* CocoaNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaNavigationController.swift; path = Source/CocoaNavigationController.swift; sourceTree = "<group>"; };
-		5AA652A4C78AF5C5057104421C8B8D83 /* NSView+Screenshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Screenshot.swift"; sourceTree = "<group>"; };
-		691DE94C916473F3E4285D6BB162CFF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		691DE94C916473F3E4285D6BB162CFF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		75AC10035121E14D86D82980D9C822E8 /* CocoaNavigationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaNavigationController.modulemap; sourceTree = "<group>"; };
-		7F0C2D8DCF2B07DF85C49831324153DA /* libPods-CocoaNavigationControllerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CocoaNavigationControllerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0C2D8DCF2B07DF85C49831324153DA /* libPods-CocoaNavigationControllerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CocoaNavigationControllerExample.a"; path = "libPods-CocoaNavigationControllerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95626645DFE617DE3A829223008618E8 /* Pods-CocoaNavigationControllerExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaNavigationControllerExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B4646BE25A8DAD3E0DE1EAC09C7A0D75 /* Pods-CocoaNavigationControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaNavigationControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
-		BD9E0593DBEB51250F6B4E563AC9C5C1 /* NSViewController+HCNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSViewController+HCNavigationController.swift"; sourceTree = "<group>"; };
+		C3AC1387CFB57E06AF040DD67F297C45 /* NSView+Screenshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Screenshot.swift"; sourceTree = "<group>"; };
 		C810401DD069F09C2D9169FDDF44C16E /* CocoaNavigationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaNavigationController-umbrella.h"; sourceTree = "<group>"; };
+		DB4A1777A722410015F5BA9500C7E96B /* NSViewController+CocoaNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSViewController+CocoaNavigationController.swift"; sourceTree = "<group>"; };
 		ECB41EB519820D38CEBCC7D3D6734E78 /* CocoaNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaNavigationController-dummy.m"; sourceTree = "<group>"; };
 		FA2D41A69D32E3F9E30F4281885E2E86 /* Pods-CocoaNavigationControllerExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CocoaNavigationControllerExample-dummy.m"; sourceTree = "<group>"; };
 		FD71B7FC1EE214DDB318D3D5F637E9BC /* Pods-CocoaNavigationControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaNavigationControllerExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				4B324F9B5E5D8AE81E5F1C78793E8E8A /* CocoaNavigationController.swift */,
-				F169E79ED55826A3DBC58A77B7FC2D7E /* Extension */,
+				F1A4C9E458F0E2EEC580ECBE6E767F23 /* Extension */,
 				1EE37D253A098A327E7932AD0D7889D5 /* Pod */,
 				B5AE21994CD6E65A767A1D2CAD85B25D /* Support Files */,
 			);
@@ -153,11 +153,11 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		F169E79ED55826A3DBC58A77B7FC2D7E /* Extension */ = {
+		F1A4C9E458F0E2EEC580ECBE6E767F23 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5AA652A4C78AF5C5057104421C8B8D83 /* NSView+Screenshot.swift */,
-				BD9E0593DBEB51250F6B4E563AC9C5C1 /* NSViewController+HCNavigationController.swift */,
+				C3AC1387CFB57E06AF040DD67F297C45 /* NSView+Screenshot.swift */,
+				DB4A1777A722410015F5BA9500C7E96B /* NSViewController+CocoaNavigationController.swift */,
 			);
 			name = Extension;
 			path = Source/Extension;
@@ -216,7 +216,7 @@
 			buildConfigurationList = DCD9009C09CA8337E26EACCED2E0CAC9 /* Build configuration list for PBXNativeTarget "CocoaNavigationController" */;
 			buildPhases = (
 				7558C1B31BFDE5A7452321F915074694 /* Headers */,
-				1D2EA681C905868E63302896D861BB2C /* Sources */,
+				26002F61ED40DE09EE3C2960981E826D /* Sources */,
 				CFC639D7818DCBF1287B382EE0418F91 /* Frameworks */,
 				08C4F538E701B6D3A6F6159ECEC2B358 /* Copy generated compatibility header */,
 			);
@@ -236,15 +236,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 5A43E8A02CE3ECF7AB8977B5A10B7F85 /* Products */;
@@ -285,14 +284,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D2EA681C905868E63302896D861BB2C /* Sources */ = {
+		26002F61ED40DE09EE3C2960981E826D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE53CB5731558AFB8FCFE6C2ED94326 /* CocoaNavigationController-dummy.m in Sources */,
-				855E9A7C5F0495BCDC91C1628B32D841 /* CocoaNavigationController.swift in Sources */,
-				C9AED723D43879FD7AA79A703C6D369C /* NSView+Screenshot.swift in Sources */,
-				AD4ADC8F9D158981CBC6728638678F3D /* NSViewController+HCNavigationController.swift in Sources */,
+				CDC93D5A713EC8FEB2FA4ABDD98EE5FC /* CocoaNavigationController-dummy.m in Sources */,
+				CF8DA7F82675CFC740E4013E9F4CF054 /* CocoaNavigationController.swift in Sources */,
+				902B86A31A9F51258811E069CACCBBBD /* NSView+Screenshot.swift in Sources */,
+				A4A2147FABAA8E89013CD22A940FC76C /* NSViewController+CocoaNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,11 +315,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		184988EE567D0C6BDD52A5510A3E177D /* Release */ = {
+		347EB37B7640AB112BC64120992CD003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD71B7FC1EE214DDB318D3D5F637E9BC /* Pods-CocoaNavigationControllerExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -328,7 +328,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-CocoaNavigationControllerExample/Pods-CocoaNavigationControllerExample.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -339,10 +339,11 @@
 			};
 			name = Release;
 		};
-		1DEB3A2EB1D72A12A557E773C16C91DE /* Debug */ = {
+		5F20E890259D36EBBDCB625BEB4853F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -350,7 +351,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -361,11 +362,98 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		7AEF910A53385514FB037088386E649D /* Debug */ = {
+		A2B40739B9387679696475B220BD075B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CocoaNavigationController;
+				PRODUCT_NAME = CocoaNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B02064D7E8BCDAC9B6D67691989B865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FC05650207F51715AE5AE6EDB1FAE9C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -416,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -429,96 +517,12 @@
 			};
 			name = Debug;
 		};
-		840EDA2E96D1EBC44E1944EDDD51EE79 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CocoaNavigationController;
-				PRODUCT_NAME = CocoaNavigationController;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		AB39E9DAA3FB7A60D3F76D07BB1684A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D4BAB08D4601F45D4BE44271A5FDF8F9 /* Debug */ = {
+		FD541A39DE819949292BB63E8F632979 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4646BE25A8DAD3E0DE1EAC09C7A0D75 /* Pods-CocoaNavigationControllerExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -526,7 +530,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-CocoaNavigationControllerExample/Pods-CocoaNavigationControllerExample.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -543,8 +547,8 @@
 		459DCB85D858F0CE539728952A66E512 /* Build configuration list for PBXNativeTarget "Pods-CocoaNavigationControllerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4BAB08D4601F45D4BE44271A5FDF8F9 /* Debug */,
-				184988EE567D0C6BDD52A5510A3E177D /* Release */,
+				FD541A39DE819949292BB63E8F632979 /* Debug */,
+				347EB37B7640AB112BC64120992CD003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -552,8 +556,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7AEF910A53385514FB037088386E649D /* Debug */,
-				AB39E9DAA3FB7A60D3F76D07BB1684A5 /* Release */,
+				FC05650207F51715AE5AE6EDB1FAE9C3 /* Debug */,
+				B02064D7E8BCDAC9B6D67691989B865B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -561,8 +565,8 @@
 		DCD9009C09CA8337E26EACCED2E0CAC9 /* Build configuration list for PBXNativeTarget "CocoaNavigationController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB3A2EB1D72A12A557E773C16C91DE /* Debug */,
-				840EDA2E96D1EBC44E1944EDDD51EE79 /* Release */,
+				5F20E890259D36EBBDCB625BEB4853F3 /* Debug */,
+				A2B40739B9387679696475B220BD075B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

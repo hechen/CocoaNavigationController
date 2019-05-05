@@ -15,12 +15,6 @@ public protocol CocoaNavigationControllerDelegate : NSObjectProtocol {
     func navigationController(_ navigationController: CocoaNavigationController, didShow viewController: NSViewController, animated: Bool)
 }
 
-/*
- CocoaNavigationController is a UINavigationController alike component brought to Cocoa
- 
- It manages a stack of cocoa view controllers and a navigation bar.
- It performs horizontal view transitions for pushed and popped views while keeping the navigation bar in sync.
- */
 extension CocoaNavigationController {
     public enum Operation : Int {
         case none
@@ -29,35 +23,43 @@ extension CocoaNavigationController {
     }
 }
 
+/*
+ CocoaNavigationController is a UINavigationController alike component brought to Cocoa
+ 
+ It manages a stack of cocoa view controllers and a navigation bar.
+ It performs horizontal view transitions for pushed and popped views while keeping the navigation bar in sync.
+ 
+ 
+ Under the hood:
+ 
+ 1. CocoaNavigation is a subclass of NSViewController, act as an container ViewController.
+ 2. So container viewController need a rootViewController to show something.
+ 3. Not the same as iOS's navigationController, we cannot make sure container-view's frame as it can be embeded in any windows which has arbitrary frame.
+ 
+ */
 public class CocoaNavigationController: NSViewController {
     
     weak open var delegate: CocoaNavigationControllerDelegate?
 
-    // Convenience method pushes the root view controller without animation.
-    // You must specify frame, since there may no window to attach.
-    public convenience init(frame frameRect: CGRect, rootViewController: NSViewController?) {
+    public convenience init(frame frameRect: CGRect, rootViewController: NSViewController) {
         self.init(nibName: nil, bundle: nil)
         
-        self.view = NSView(frame: frameRect)
-        self.view.autoresizingMask = [.minXMargin, .minYMargin, .width, .maxXMargin, .maxYMargin, .height]
+        view = NSView(frame: frameRect)
+        view.autoresizingMask = [.minXMargin, .minYMargin, .width, .maxXMargin, .maxYMargin, .height]
+
+        viewControllers = [rootViewController]
         
-        var viewController: NSViewController
-        if rootViewController == nil {
-            viewController = NSViewController()
-            viewController.view = NSView(frame: frameRect)
-        } else {
-            viewController = rootViewController!
-        }
-        
-        viewControllers = [viewController]
-        
-        viewController.view.autoresizingMask = [.minXMargin, .minYMargin, .width, .maxXMargin, .maxYMargin, .height]
-        viewController.view.frame = self.view.bounds
-        self.view.addSubview(viewController.view)
+        rootViewController.view.autoresizingMask = [.minXMargin, .minYMargin, .width, .maxXMargin, .maxYMargin, .height]
+        rootViewController.view.frame = view.bounds
+
+        view.addSubview(rootViewController.view)
     }
     
     // Uses a horizontal slide transition. Has no effect if the view controller is already in the stack.
     open func pushViewController(_ viewController: NSViewController, animated: Bool) {
+        if isAnimating {
+            return
+        }
         
         viewController.navigationController = self
         
@@ -68,24 +70,28 @@ public class CocoaNavigationController: NSViewController {
         transition(from: topViewController, to: self.topViewController, animated: animated)
     }
     
-    // Returns the popped controller.
+    /*
+     @discussion:
+     
+     This method removes the top view controller from the stack and makes the new top of the stack the active view controller.
+     If the view controller at the top of the stack is the root view controller, this method does nothing.
+     In other words, you cannot pop the last item on the stack.
+     */
     @discardableResult
     open func popViewController(animated: Bool) -> NSViewController? {
-        // rootViewController is not allowed to pop
         if viewControllers.count == 1 {
             return nil
         }
         
-        // last view controller
-        let poppedViewController = self.topViewController
+        let poppedViewController = topViewController
         viewControllers = Array(viewControllers.dropLast())
         
-        transition(from: poppedViewController, to: self.topViewController, animated: animated, operation: .pop)
+        transition(from: poppedViewController, to: topViewController, animated: animated, operation: .pop)
         
         return poppedViewController
     }
     
-    // Pops view controllers until the one specified is on top. Returns the popped controllers.
+    // Pops view controllers until the one specified is on top. Return the popped controllers.
     @discardableResult
     open func popToViewController(_ viewController: NSViewController, animated: Bool) -> [NSViewController]? {
         // last one.
@@ -97,6 +103,8 @@ public class CocoaNavigationController: NSViewController {
         guard let index = viewControllers.firstIndex(of: viewController) else {
             return nil
         }
+
+        transition(from: topViewController, to: viewController, animated: animated, operation: .pop)
         
         // from viewcontroller.next to last
         var poppedViewControllers = [NSViewController]()
@@ -104,28 +112,25 @@ public class CocoaNavigationController: NSViewController {
             poppedViewControllers.append(viewControllers[i])
         }
         viewControllers = Array(viewControllers.dropLast(viewControllers.count - index - 1))
-
-        transition(from: topViewController, to: viewController, animated: animated)
         
         return poppedViewControllers
     }
     
-    // Pops until there's only a single view controller left on the stack. Returns the popped controllers.
+    // Pop until there's only a single view controller left on the stack. Returns the popped controllers.
     open func popToRootViewController(animated: Bool) -> [NSViewController]? {
         return popToViewController(rootViewController, animated: animated)
     }
 
-    // The top view controller on the stack.
-    open var topViewController: NSViewController {
-        get {
-            return viewControllers.last!
-        }
-    }
     
     // The current view controller stack.
     open private(set) var viewControllers = [NSViewController]()
     
+    // Top of stack
+    open var topViewController: NSViewController {
+        return viewControllers.last!
+    }
     
+    // Bottom of stack
     open var rootViewController: NSViewController {
         return viewControllers.first!
     }
@@ -156,15 +161,20 @@ public class CocoaNavigationController: NSViewController {
                             to toViewController: NSViewController,
                             animated: Bool, operation: Operation = .push) {
         
-        toViewController.view.autoresizingMask = self.view.autoresizingMask
+        delegate?.navigationController(self, willShow: toViewController, animated: animated)
         
-        var fromViewControllerToFrame = self.view.bounds
-        var toViewControllerFromFrame = self.view.bounds
+        toViewController.view.autoresizingMask = view.autoresizingMask
+        
+        var fromViewControllerToFrame = view.bounds
+        var toViewControllerFromFrame = view.bounds
 
         if !animated {
             fromViewController.view.removeFromSuperview()
-            toViewController.view.frame = self.view.bounds
+            toViewController.view.frame = view.bounds
             view.addSubview(toViewController.view)
+            
+            delegate?.navigationController(self, didShow: toViewController, animated: animated)
+            
             return
         }
         
@@ -172,13 +182,13 @@ public class CocoaNavigationController: NSViewController {
         switch operation {
         case .push:
             // toViewController from right to left.
-            fromViewControllerToFrame.origin.x = -self.view.frame.size.width
-            toViewControllerFromFrame.origin.x = self.view.frame.size.width
+            fromViewControllerToFrame.origin.x = -view.frame.size.width
+            toViewControllerFromFrame.origin.x = view.frame.size.width
             
         case .pop:
             /// Pop fromViewController, offset width to the right.
-            fromViewControllerToFrame.origin.x = self.view.frame.size.width
-            toViewControllerFromFrame.origin.x = -self.view.frame.size.width
+            fromViewControllerToFrame.origin.x = view.frame.size.width
+            toViewControllerFromFrame.origin.x = -view.frame.size.width
             
         case .none: break
         }
@@ -187,15 +197,17 @@ public class CocoaNavigationController: NSViewController {
         toViewController.view.frame = toViewControllerFromFrame
         fromViewController.view.removeFromSuperview()
         
-        let fromControllerSnapshot = NSImageView(frame: self.view.bounds)
+        let fromControllerSnapshot = NSImageView(frame: view.bounds)
         let toControllerSnapshot = NSImageView(frame: toViewControllerFromFrame)
         
         fromControllerSnapshot.image = fromViewController.view.snapshot()
         toControllerSnapshot.image = toViewController.view.snapshot()
         
-        self.view.addSubview(fromControllerSnapshot)
-        self.view.addSubview(toControllerSnapshot)
+        view.addSubview(fromControllerSnapshot)
+        view.addSubview(toControllerSnapshot)
         
+        
+        // Do something after animation completes.
         NSAnimationContext.current.completionHandler = {
             toViewController.view.frame = self.view.frame
             fromControllerSnapshot.removeFromSuperview()
@@ -207,17 +219,22 @@ public class CocoaNavigationController: NSViewController {
             toViewController.view.frame = self.view.bounds
         }
         
-        delegate?.navigationController(self, willShow: toViewController, animated: animated)
-     
-        // Animation Group
-        NSAnimationContext.beginGrouping()
         
+        
+        NSAnimationContext.beginGrouping()
         NSAnimationContext.current.duration = animationDuration
         
         fromControllerSnapshot.animator().frame = fromViewControllerToFrame
-        toControllerSnapshot.animator().frame = self.view.bounds
+        toControllerSnapshot.animator().frame = view.bounds
         
         NSAnimationContext.endGrouping()
+        
+        isAnimating = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) { [weak self] in
+            self?.isAnimating = false
+        }
     }
+    
     fileprivate let animationDuration : TimeInterval = 0.3
+    fileprivate var isAnimating: Bool = false
 }

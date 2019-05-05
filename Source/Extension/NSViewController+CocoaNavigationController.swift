@@ -1,6 +1,6 @@
 //
-//  NSViewController+HCNavigationController.swift
-//  HCNavigationController
+//  NSViewController+CocoaNavigationController.swift
+//  CocoaNavigationController
 //
 //  Created by chen he on 2019/4/2.
 //

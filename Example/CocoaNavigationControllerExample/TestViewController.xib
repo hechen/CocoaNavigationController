@@ -15,19 +15,23 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="318" height="449"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDZ-H0-179">
-                    <rect key="frame" x="110" y="127" width="261" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="95r-8d-CD0">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HDZ-H0-179">
+                    <rect key="frame" x="139" y="216" width="41" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="95r-8d-CD0">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="HDZ-H0-179" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="In3-Hc-VNS"/>
+                <constraint firstItem="HDZ-H0-179" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="uxQ-sU-Xpr"/>
+            </constraints>
+            <point key="canvasLocation" x="60" y="242.5"/>
         </customView>
     </objects>
 </document>

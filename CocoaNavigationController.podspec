@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
 	s.name     = 'CocoaNavigationController'
-	s.version  = '0.0.4'
+	s.version  = '0.1'
 	s.license  = 'MIT'
 	s.summary  = 'UINavigationController Alike On macOS'
-	s.homepage = 'https://github.com/hchen/CocoaNavigationController'
+	s.homepage = 'https://github.com/hechen/CocoaNavigationController'
 	s.authors  = { 'Chen' => 'hechen.dream@gmail.com'}
-	s.source   = { :git => 'https://github.com/hechen/CocoaNavigationController.git', :tag => '0.0.4' }
+	s.source   = { :git => 'https://github.com/hechen/CocoaNavigationController.git', :tag => s.version.to_s }
 	s.source_files = 'Source/**/**/*'
-	s.platform     = :osx, '10.10'
+	s.platform     = :osx, '10.13'
 	s.requires_arc = true
-  	s.swift_version = '4.2'
+  s.swift_version = '5.0'
 	s.license      = {
     :type => 'MIT',
     :file => 'LICENSE',

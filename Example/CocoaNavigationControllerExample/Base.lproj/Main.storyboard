@@ -710,9 +710,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="564" height="430"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-Eg-Pv9">
-                                <rect key="frame" x="180" y="197" width="205" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-Eg-Pv9">
+                                <rect key="frame" x="180" y="245" width="205" height="32"/>
                                 <buttonCell key="cell" type="push" title="Show Navigation Controller" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3j6-CP-fE1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -721,9 +720,8 @@
                                     <action selector="showNavigationController:" target="XfG-lQ-9wD" id="JQS-M1-gv1"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-uG-d7X">
-                                <rect key="frame" x="247" y="121" width="71" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-uG-d7X">
+                                <rect key="frame" x="247" y="175" width="71" height="32"/>
                                 <buttonCell key="cell" type="push" title="Push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XXz-wS-32n">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -732,9 +730,8 @@
                                     <action selector="Push:" target="XfG-lQ-9wD" id="0n7-Pf-67P"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cC-zG-lh3">
-                                <rect key="frame" x="251" y="78" width="64" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9cC-zG-lh3">
+                                <rect key="frame" x="250" y="132" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Pop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SpZ-50-VtW">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -743,8 +740,53 @@
                                     <action selector="Pop:" target="XfG-lQ-9wD" id="kJQ-CF-Gtk"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Ka-SE-IVK">
+                                <rect key="frame" x="225" y="88" width="114" height="32"/>
+                                <buttonCell key="cell" type="push" title="Pop To Root" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hrG-PJ-XiW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="PopToRoot:" target="XfG-lQ-9wD" id="Efb-hx-fsf"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kmd-RU-KfM">
+                                <rect key="frame" x="162" y="31" width="241" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="ViewController in Navigation Stack： " id="mA8-wc-Jny">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WtH-em-j1w">
+                                <rect key="frame" x="403" y="31" width="16" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="0 " id="Jg9-5r-T3Z">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="5Ka-SE-IVK" firstAttribute="centerX" secondItem="9cC-zG-lh3" secondAttribute="centerX" id="0zn-HE-MGZ"/>
+                            <constraint firstItem="WtH-em-j1w" firstAttribute="centerY" secondItem="Kmd-RU-KfM" secondAttribute="centerY" id="2oK-sC-Pfk"/>
+                            <constraint firstItem="2gu-Eg-Pv9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="157" id="Arj-dA-wzl"/>
+                            <constraint firstItem="5Ka-SE-IVK" firstAttribute="top" secondItem="9cC-zG-lh3" secondAttribute="bottom" constant="23" id="DHj-jo-9NF"/>
+                            <constraint firstItem="5Ka-SE-IVK" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="EDj-gP-65Q"/>
+                            <constraint firstItem="Kmd-RU-KfM" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="F0H-AV-f2u"/>
+                            <constraint firstItem="9cC-zG-lh3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="aAS-DL-P4R"/>
+                            <constraint firstItem="WtH-em-j1w" firstAttribute="leading" secondItem="Kmd-RU-KfM" secondAttribute="trailing" constant="4" id="gOW-US-D4K"/>
+                            <constraint firstItem="Kmd-RU-KfM" firstAttribute="top" secondItem="5Ka-SE-IVK" secondAttribute="bottom" constant="47" id="oIo-IG-WQO"/>
+                            <constraint firstItem="Lmv-uG-d7X" firstAttribute="top" secondItem="2gu-Eg-Pv9" secondAttribute="bottom" constant="49" id="oWc-TH-cEv"/>
+                            <constraint firstItem="2gu-Eg-Pv9" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="pvm-Sh-SBb"/>
+                            <constraint firstItem="9cC-zG-lh3" firstAttribute="top" secondItem="Lmv-uG-d7X" secondAttribute="bottom" constant="22" id="qPr-qV-fCC"/>
+                            <constraint firstItem="9cC-zG-lh3" firstAttribute="centerX" secondItem="Lmv-uG-d7X" secondAttribute="centerX" id="rSe-mA-k9f"/>
+                            <constraint firstItem="Lmv-uG-d7X" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="uoH-GA-p2D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewControllerCounter" destination="WtH-em-j1w" id="RyE-UB-RI8"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
