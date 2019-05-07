@@ -315,6 +315,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2A63EFBEE5D7F09CDF6E763FC354CDFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CocoaNavigationController;
+				PRODUCT_NAME = CocoaNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
 		347EB37B7640AB112BC64120992CD003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD71B7FC1EE214DDB318D3D5F637E9BC /* Pods-CocoaNavigationControllerExample.release.xcconfig */;
@@ -336,60 +363,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5F20E890259D36EBBDCB625BEB4853F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CocoaNavigationController;
-				PRODUCT_NAME = CocoaNavigationController;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		A2B40739B9387679696475B220BD075B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CocoaNavigationController;
-				PRODUCT_NAME = CocoaNavigationController;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -450,6 +423,33 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C88B48077DC03220B7478D24A9402C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB851B590CE0C59532BF518F8E9F271 /* CocoaNavigationController.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaNavigationController/CocoaNavigationController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = Headers/Public/CocoaNavigationController/CocoaNavigationController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CocoaNavigationController;
+				PRODUCT_NAME = CocoaNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -565,8 +565,8 @@
 		DCD9009C09CA8337E26EACCED2E0CAC9 /* Build configuration list for PBXNativeTarget "CocoaNavigationController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5F20E890259D36EBBDCB625BEB4853F3 /* Debug */,
-				A2B40739B9387679696475B220BD075B /* Release */,
+				2A63EFBEE5D7F09CDF6E763FC354CDFA /* Debug */,
+				C88B48077DC03220B7478D24A9402C0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 	s.source_files = 'Source/**/**/*'
 	s.platform     = :osx, '10.13'
 	s.requires_arc = true
-  s.swift_version = '5.0'
+  s.swift_version = '4.2'
 	s.license      = {
     :type => 'MIT',
     :file => 'LICENSE',

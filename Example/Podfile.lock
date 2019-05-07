@@ -1,5 +1,5 @@
 PODS:
-  - CocoaNavigationController (0.0.4)
+  - CocoaNavigationController (0.1.1)
 
 DEPENDENCIES:
   - CocoaNavigationController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaNavigationController: aefad9e987d323d5f0187cc014b8ccebe28dab89
+  CocoaNavigationController: a33feee1221d72a74a1645d20edbca6e37a0ab79
 
 PODFILE CHECKSUM: 40f11e51da9bbcd669112a75fda0f79f78d59595
 
