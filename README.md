@@ -1,74 +1,138 @@
 # CocoaNavigationController
 
-![Build Status](https://travis-ci.com/hechen/CocoaNavigationController.svg?branch=master)   ![Cocoapods](https://img.shields.io/cocoapods/v/CocoaNavigationController.svg)   ![Cocoapods platforms](https://img.shields.io/cocoapods/p/CocoaNavigationController.svg)   ![Swift Version](https://img.shields.io/badge/Swift-4.2-F16D39.svg?style=flat)
+A UINavigationController-like container view controller for macOS.
 
-UINavigationController alike, macOS
+[![Swift 5.9+](https://img.shields.io/badge/Swift-5.9+-orange.svg)](https://swift.org)
+[![macOS 12+](https://img.shields.io/badge/macOS-12+-blue.svg)](https://developer.apple.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+## Features
 
-![Demo](.assets/demo.gif)
+- **Push & Pop** - Familiar iOS-style navigation API
+- **Animated Transitions** - Smooth horizontal slide animations
+- **View Controller Stack** - Full stack management (push, pop, popToRoot, setViewControllers)
+- **Delegate Support** - willShow/didShow callbacks
+- **Modern Swift** - Swift 5.9+ with @MainActor safety
 
+## Installation
 
-### How to use
+### Swift Package Manager
 
-``` Swift
-    let navigationController = CocoaNavigationController(withFrame: NSApp.keyWindow!.frame, rootViewController: nil)
-    let window = NSWindow(contentViewController: self.navigationController!)
-    window.makeKeyAndOrderFront(nil)
+Add to your `Package.swift`:
 
-
-    // Push
-    let vc = TestViewController(nibName: "TestViewController", bundle: nil)
-    navigationController.pushViewController(vc, animated: true)
-
-    // Pop
-    navigationController?.popViewController(vc, animated: true)
+```swift
+dependencies: [
+    .package(url: "https://github.com/hechen/CocoaNavigationController.git", from: "2.0.0")
+]
 ```
 
+Or in Xcode: **File → Add Package Dependencies** → Enter the repository URL.
 
+## Usage
 
-### Under the hood
+### Basic Setup
 
-Actually, we just transition between two subview, contained by root view.
+```swift
+import CocoaNavigationController
 
-Arrange the two subview horizontally. Then slide the whole one from right to left for push, pop with opposite direction.
+// Create navigation controller with a root view controller
+let rootVC = MyViewController()
+let navController = CocoaNavigationController(rootViewController: rootVC)
 
-
-``` Swift
-
-                        Push
-     ◀─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-     ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐ ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
-     
-     │                   │ │                   │
-     
-     │                   │ │                   │
-     
-     │       From        │ │        To         │
-     
-     │                   │ │                   │
-     
-     │                   │ │                   │
-     
-     └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘ └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘
-     ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ▶
-                        Pop
-                        
+// Set as window's content view controller
+window.contentViewController = navController
 ```
 
-For transition fluently, we snapshot from-view and to-view as placeholders, which hide all the remove/add actions.
+### Push
 
-And, like `drawViewHierarchyInRect:afterScreenUpdates` in iOS, NSView support similar method like below:
+```swift
+let detailVC = DetailViewController()
+navigationController?.push(detailVC, animated: true)
+```
 
-``` Swift
-extension NSView {
-    func snapshot() -> NSImage? {
-        // Returns a bitmap-representation object suitable for caching the specified portion of the view.
-        guard let bitmapRep = bitmapImageRepForCachingDisplay(in: bounds) else { return nil }
-        cacheDisplay(in: bounds, to: bitmapRep)
-        let image = NSImage()
-        image.addRepresentation(bitmapRep)
-        bitmapRep.size = bounds.size
-        return image
+### Pop
+
+```swift
+// Pop one level
+navigationController?.pop(animated: true)
+
+// Pop to specific view controller
+navigationController?.popToViewController(targetVC, animated: true)
+
+// Pop to root
+navigationController?.popToRootViewController(animated: true)
+```
+
+### Set Stack
+
+```swift
+// Replace entire stack
+let newStack = [rootVC, vc1, vc2, vc3]
+navigationController?.setViewControllers(newStack, animated: true)
+```
+
+### Access Navigation Controller
+
+```swift
+// From any view controller in the stack
+class MyViewController: NSViewController {
+    func goBack() {
+        navigationController?.pop(animated: true)
     }
 }
 ```
+
+### Delegate
+
+```swift
+class MyClass: CocoaNavigationControllerDelegate {
+    func navigationController(_ navController: CocoaNavigationController, 
+                              willShow viewController: NSViewController, 
+                              animated: Bool) {
+        print("Will show: \(viewController)")
+    }
+    
+    func navigationController(_ navController: CocoaNavigationController, 
+                              didShow viewController: NSViewController, 
+                              animated: Bool) {
+        print("Did show: \(viewController)")
+    }
+}
+
+navController.delegate = myDelegate
+```
+
+## How It Works
+
+The navigation controller uses snapshot-based animations for smooth transitions:
+
+```
+                    Push →
+    ┌─────────────┐ ┌─────────────┐
+    │             │ │             │
+    │    From     │ │     To      │
+    │             │ │             │
+    └─────────────┘ └─────────────┘
+                    ← Pop
+```
+
+1. Before animation: Create snapshots of both views
+2. During animation: Slide snapshots horizontally
+3. After animation: Replace snapshot with real view
+
+This ensures smooth 60fps animations regardless of view complexity.
+
+## Requirements
+
+- macOS 12.0+
+- Swift 5.9+
+- Xcode 15+
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## Credits
+
+Originally created by [Chen He](https://github.com/hechen) in 2019.
+Updated in 2026 with modern Swift patterns and Swift Package Manager support.

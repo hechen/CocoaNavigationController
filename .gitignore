@@ -1,1 +1,29 @@
+# Xcode
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+Package.resolved
+
+# CocoaPods (legacy)
+Pods/
+Podfile.lock
+
+# macOS
 .DS_Store
+._*
+
+# IDE
+.idea/
+.vscode/
